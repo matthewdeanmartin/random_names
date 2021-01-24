@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.idea/
+
+reports/all_mypy_errors.txt
+
+reports/dead_code.txt
+
+reports/line_counts.txt
+
+reports/lint.txt
