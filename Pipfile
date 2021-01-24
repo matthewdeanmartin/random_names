@@ -4,13 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "==6.0.1"
+pytest = "*"
 pytest-cov = ">=2.10.1"
 pytest-timeout = "*"
 pytest-xdist = ">=2.1.0"
 pip-check = "==2.6"
-pynt = "==0.8.2"
-pynt-contrib = "==0.2.0"
 checksumdir = "==1.1.7"
 dodgy = "==0.2.1"
 gitchangelog = "==3.0.4"
@@ -27,39 +25,13 @@ ifaddr = "*"
 vendorize = "*"
 tox = "*"
 setuptools-scm = "*"
+python-dotenv = "*"
+requests ="*"
 
 [packages]
-pyrankvote = "*"
-black = "*"
-requests = "*"
-py-stackexchange = "*"
-beautifulsoup4 = "*"
-python-dotenv = "*"
-pipreqs = "*"
-pyupgrade = "*"
-2to3 = "*"
-# this has perf problems and is tricky to install.
-# guesslang = "*"
-html2text = "*"
-# future = "*" why?
-pyflakes = "*"
-stdlib-list = "*"
-jinja2 = "*"
-stackapi = "*"
-pip-upgrader = "*"
-pur = "*"
-pypistats = "*"
-pypinfo = "*"
-nbformat = "*"
-vermin = "*"
-markdown = "*"
-toml = "*"
-whats-that-code = ">=0.1.10"
-diskcache = "*"
-pytest = "*"
 
 [requires]
-python_version = "3.8"
+python_version = ">=3.6"
 
 [pipenv]
 allow_prereleases = true

@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "so_pip"
-version = "0.1.29"
-description = "Generate packages from Stackoverflow answers"
+name = "random_names"
+version = "0.1.0"
+description = "Convert int to random name, like tree_dance and convert it back to same int."
 authors = ["Matthew Martin <matthewdeanmartin@gmail.com>"]
-keywords = ["packaging", "stackoverflow"]
+keywords = ["mneumonic", "pseudorandom", "name-generator"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -16,78 +16,52 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
 ]
 include = [
-    "so_pip/**/*.py",
-    "so_pip/**/*.md",
-    "so_pip/**/*.txt",
-    "so_pip/**/*.html",
-    "so_pip/**/*.jinja",
+    "random_names/**/*.py",
+    "random_names/**/*.md",
+    "random_names/**/*.txt",
+    "random_names/**/*.html",
+    "random_names/**/*.jinja",
 ]
 exclude = [
-    "so_pip/_cache/*.html",
+
 ]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/matthewdeanmartin/so_pip"
-homepage = "https://github.com/matthewdeanmartin/so_pip"
-documentation ="https://github.com/matthewdeanmartin/so_pip"
+repository = "https://github.com/matthewdeanmartin/random_names"
+homepage = "https://github.com/matthewdeanmartin/random_names"
+documentation ="https://github.com/matthewdeanmartin/random_names"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/matthewdeanmartin/so_pip/issues"
-"Change Log" = "https://github.com/matthewdeanmartin/so_pip/blob/main/CHANGES.md"
+"Bug Tracker" = "https://github.com/matthewdeanmartin/random_names/issues"
+"Change Log" = "https://github.com/matthewdeanmartin/random_names/blob/main/docs/CHANGES.md"
 
 [tool.poetry.scripts]
-so_pip = 'so_pip.__main__:main'
+# so_pip = 'so_pip.__main__:main'
 
 [tool.poetry.dependencies]
 python = ">=3.6"
-black = "*"
-requests = "*"
-py-stackexchange = "*"
-beautifulsoup4 = "*"
-python-dotenv = "*"
-pipreqs = "*"
-pyupgrade = "*"
-2to3 = "*"
-html2text = "*"
-pyflakes = "*"
-stdlib-list = "*"
-jinja2 = "*"
-stackapi = "*"
-pip-upgrader = "*"
-pur = "*"
-pypistats = "*"
-pypinfo = "*"
-nbformat = "*"
-pyrankvote = "*"
-vermin = "*"
-markdown = "*"
-toml = "*"
-whats-that-code = ">=0.1.6"
+
 
 [tool.poetry.dev-dependencies]
-pytest = "==6.0.1"
+pytest = "*"
 pytest-cov = ">=2.10.1"
 pytest-timeout = "*"
 pytest-xdist = ">=2.1.0"
 pip-check = "==2.6"
-pynt = "==0.8.2"
-pynt-contrib = "==0.2.0"
 checksumdir = "==1.1.7"
-requests = "==2.22.0"
 dodgy = "==0.2.1"
 gitchangelog = "==3.0.4"
 liccheck = "==0.4.3"
 psutil = "==5.6.7"
 pebble = "==4.5.0"
-python-dotenv = "==0.11.0"
 gitpython = "*"
 sshtunnel = "*"
 ifaddr = "*"
 vendorize = "*"
-# dotenv-linter = "==0.1.5"
-# colorama = "==0.4.1"
-# click = "==6.7"
-# hypothesis = "*"
+tox = "*"
+setuptools-scm = "*"
+python-dotenv = "*"
+requests ="*"
 
 [tool.black]
 line-length = 88
@@ -133,7 +107,7 @@ norecursedirs = ["vendor", "scripts"]
 default_section = "THIRDPARTY"
 force_grid_wrap = 0
 include_trailing_comma = true
-known_first_party = ["so_pip"]
+known_first_party = ["random_names"]
 line_length = 88
 multi_line_output = 3
 use_parentheses = true

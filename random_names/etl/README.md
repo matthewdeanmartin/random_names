@@ -32,4 +32,3 @@ Google's Bad Words
 --
 Unspecified license
 https://code.google.com/archive/p/badwordslist/downloads
-

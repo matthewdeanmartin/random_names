@@ -74,5 +74,3 @@ def number_to_name(value: int, prefix: str, post_type: str) -> str:
         index = int("".join(list(reversed(chunk))))
         parts.append(NAMES[index])
     return "_".join([prefix, post_type] + parts)
-
-
