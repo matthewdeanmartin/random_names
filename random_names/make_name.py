@@ -22,7 +22,7 @@ def initialize() -> None:
     # source: https://www.mit.edu/~ecprice/wordlist.10000
     # See ETL for what it took to get a clean file.
     words_path = find_file(FILE, __file__)
-    with open(words_path) as name_file:
+    with open(words_path, encoding="utf-8") as name_file:
         NAMES.extend(name.strip() for name in name_file.readlines())
 
     if len(NAMES) != 10000:
@@ -32,7 +32,7 @@ def initialize() -> None:
 # TODO: replace with a SO sourced post.
 # https://www.geeksforgeeks.org/break-list-chunks-size-n-python/
 def divide_chunks(value: List[Any], number: int) -> Any:
-    """ looping till length l"""
+    """looping till length l"""
     for index in range(0, len(value), number):
         yield value[index : index + number]
 

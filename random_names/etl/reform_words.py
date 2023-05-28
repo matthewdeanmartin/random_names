@@ -6,12 +6,12 @@ Generate a list of 10,000 good words.
 def run() -> None:
     """Combine lots of words, remove lots of bad words"""
     # Typo: In word 'acer'
-    with open("bad_words.txt") as bad:
+    with open("bad_words.txt", encoding="utf-8") as bad:
         bad_words = [
             _.strip(" ,*.") for _ in bad.read().split("\n") if not _.startswith("#")
         ]
 
-    with open("wordlist.10000.txt") as long_file:
+    with open("wordlist.10000.txt", encoding="utf-8") as long_file:
         ten_k = [
             _.strip(" ,*.")
             for _ in long_file.read().split("\n")
@@ -48,7 +48,7 @@ def run() -> None:
             if len([letter for letter in word if letter in "aeiou"]) == 0:
                 bad_words.append(word)
 
-    with open("most-common-nouns-english.csv") as most_common_file:
+    with open("most-common-nouns-english.csv", encoding="utf-8") as most_common_file:
         most_common = [
             _.strip(" ,*.")
             for _ in most_common_file.read().split("\n")
@@ -76,7 +76,7 @@ def run() -> None:
         else:
             most_common_simpler.append(word)
 
-    with open("people_names.txt") as people_file:
+    with open("people_names.txt", encoding="utf-8") as people_file:
         people = [
             _.strip(" ,*.")
             for _ in people_file.read().split("\n")
