@@ -82,7 +82,6 @@ from navio_tasks.commands.cli_pylint import do_lint, evaluated_lint_results
 from navio_tasks.commands.cli_pyt import do_python_taint
 from navio_tasks.commands.cli_pytest import do_pytest, do_pytest_coverage
 from navio_tasks.commands.cli_tox import do_tox
-from navio_tasks.commands.lib_dodgy import do_dodgy
 from navio_tasks.dependency_commands.cli_pin_dependencies import (
     convert_pipenv_to_requirements,
 )
@@ -344,16 +343,6 @@ def mccabe() -> None:
     do_mccabe()
 
 
-@task(formatting, compile_py)
-@skip_if_no_change("dodgy")
-@timed()
-def dodgy_check() -> None:
-    """
-    Linting with dodgy
-    """
-    do_dodgy()
-
-
 @task()
 @skip_if_no_change("detect_secrets")
 @timed()
@@ -561,7 +550,6 @@ def jiggle_version() -> None:
     vulture,
     compile_py,
     lint,
-    dodgy_check,
     bandit,
     mccabe,
     pin_dependencies,
@@ -597,7 +585,6 @@ def parallel_checks() -> None:
         vulture,
         do_compile_py,
         do_lint,
-        do_dodgy,
         do_bandit,
         do_python_taint,
         do_mccabe,
@@ -644,7 +631,6 @@ def parallel_checks() -> None:
     vulture,
     compile_py,
     lint,
-    dodgy_check,
     bandit,
     mccabe,
 )  # docs ... later

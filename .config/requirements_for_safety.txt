@@ -12,7 +12,6 @@ configparser==5.3.0
 coverage==7.2.6
 cryptography==40.0.2
 distlib==0.3.6
-dodgy==0.2.1
 execnet==1.9.0
 filelock==3.12.0
 gitchangelog==3.0.4
