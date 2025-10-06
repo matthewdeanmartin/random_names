@@ -1,6 +1,7 @@
 """
 Output for user to see.
 """
+
 from random_names import settings as settings
 
 
