@@ -1,10 +1,6 @@
 import random
 
-from random_names.make_name import (
-    number_to_name,
-    number_from_name,
-    initialize,
-)
+from random_names.make_name import initialize, number_from_name, number_to_name
 
 
 def test_make_up_module_name() -> None:
