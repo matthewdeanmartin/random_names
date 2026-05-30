@@ -36,7 +36,7 @@ I ran the world list through cuss word detection & removed most of the worst.
 
 Docs
 ----
-- [To do](TODO.md)
+- [To do](https://github.com/matthewdeanmartin/random_names/blob/main/TODO.md)
 
 
 Related Pypi Packages
@@ -63,3 +63,10 @@ Converting numbers to a shorter string, like [Ascii85](https://en.wikipedia.org/
 
 Random names, just random names. No way to convert to a number
 - [pypi search](https://pypi.org/search/?q=random+name) To many to list, mostly just a function or two.
+
+## Project Links
+
+- [GitHub](https://github.com/matthewdeanmartin/random_names)
+- [PyPI](https://pypi.org/project/random-names/)
+- [Bug Tracker](https://github.com/matthewdeanmartin/random_names/issues)
+- [Change Log](https://github.com/matthewdeanmartin/random_names/blob/main/CHANGELOG.md)

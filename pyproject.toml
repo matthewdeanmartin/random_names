@@ -27,7 +27,7 @@ Repository = "https://github.com/matthewdeanmartin/random_names"
 Homepage = "https://github.com/matthewdeanmartin/random_names"
 Documentation = "https://github.com/matthewdeanmartin/random_names"
 "Bug Tracker" = "https://github.com/matthewdeanmartin/random_names/issues"
-"Change Log" = "https://github.com/matthewdeanmartin/random_names/blob/main/docs/CHANGES.md"
+"Change Log" = "https://github.com/matthewdeanmartin/random_names/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling>=1.27.0"]
