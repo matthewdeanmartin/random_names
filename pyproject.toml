@@ -62,6 +62,7 @@ dev = [
     "troml-dev-status>=0.6.0; python_version >= '3.9'",
     "dont-be-lazy>=0.1.2; python_version >= '3.10'",
     "pydoc-fork>=3.0.0; python_version >= '3.10'",
+    "keepachangelog-manager-fork>=6.1.1,<7",
 ]
 
 [tool.uv]
@@ -69,6 +70,24 @@ default-groups = ["dev"]
 
 [tool.uv.pip]
 universal = true
+
+# changelogmanager (keepachangelog-manager-fork) drives the release workflows.
+# See .github/workflows/create_draft_release.yml and release.yml.
+[tool.changelogmanager.versioning]
+scheme = "semver"
+
+[tool.changelogmanager.validation]
+enforce_preamble = true
+format = "auto"
+
+[tool.changelogmanager.defaults]
+error_format = "github"
+commit_schema = "keepachangelog"
+schema_version = "current"
+
+[[tool.changelogmanager.components]]
+name = "default"
+changelog = "CHANGELOG.md"
 [tool.black]
 line-length = 88
 target-version = ['py37']
