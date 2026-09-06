@@ -19,6 +19,10 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
 ]
 dependencies = []
 
@@ -43,6 +47,12 @@ include = [
     "random_names/**/*.jinja",
 ]
 
+[tool.hatch.build.targets.sdist]
+# No section previously existed, so hatchling swept the whole project tree
+# (including .config/.build_state/*, .github/workflows, Pipfile.lock, reports/);
+# pin an explicit list instead.
+include = ["/README.md", "/LICENSE", "/CHANGELOG.md", "/random_names", "/test"]
+
 [dependency-groups]
 dev = [
     "pytest",
@@ -62,7 +72,8 @@ dev = [
     "troml-dev-status>=0.6.0; python_version >= '3.9'",
     "dont-be-lazy>=0.1.2; python_version >= '3.10'",
     "pydoc-fork>=3.0.0; python_version >= '3.10'",
-    "keepachangelog-manager-fork[all]>=6.6.0",
+    "keepachangelog-manager-fork[all]>=6.6.0; python_version < '3.15'",  # [all] extra pulls google-re2, no cp315 wheel / fails to build on Windows
+    "keepachangelog-manager-fork>=6.6.0; python_version >= '3.15'",  # base package only; drop [all] extra to avoid google-re2 on 3.15+
 ]
 
 [tool.uv]
