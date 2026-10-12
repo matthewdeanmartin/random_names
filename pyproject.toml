@@ -4,7 +4,7 @@ version = "0.2.0"
 description = "Convert int to random name, like tree_dance and convert it back to same int."
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 authors = [{ name = "Matthew Martin", email = "matthewdeanmartin@gmail.com" }]
 keywords = ["mneumonic", "pseudorandom", "name-generator"]
 classifiers = [
@@ -14,10 +14,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -69,9 +65,9 @@ dev = [
     "python-dotenv",
     "requests",
     "jiggle-version>=2.1.0",
-    "troml-dev-status>=0.6.0; python_version >= '3.9'",
-    "dont-be-lazy>=0.1.2; python_version >= '3.10'",
-    "pydoc-fork>=3.0.0; python_version >= '3.10'",
+    "troml-dev-status>=0.6.0",
+    "dont-be-lazy>=0.1.2",
+    "pydoc-fork>=3.0.0",
     "keepachangelog-manager-fork[fast]>=6.8.0; python_version < '3.15'",  # [fast] adds orjson+re2; google-re2 has no cp315 wheel on Windows
     "keepachangelog-manager-fork[stdlib]>=6.8.0; python_version >= '3.15'",  # [stdlib] is pure-Python: same features, no native wheels needed
 ]
@@ -102,7 +98,7 @@ name = "default"
 changelog = "CHANGELOG.md"
 [tool.black]
 line-length = 88
-target-version = ['py37']
+target-version = ['py311']
 include = '\.pyi?$'
 exclude = '''
 
@@ -146,3 +142,6 @@ line_length = 88
 multi_line_output = 3
 use_parentheses = true
 
+
+[tool.ruff.lint]
+ignore = ["RUF100"]  # unused noqa differs across Python versions
