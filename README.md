@@ -70,3 +70,10 @@ Random names, just random names. No way to convert to a number
 - [PyPI](https://pypi.org/project/random-names/)
 - [Bug Tracker](https://github.com/matthewdeanmartin/random_names/issues)
 - [Change Log](https://github.com/matthewdeanmartin/random_names/blob/main/CHANGELOG.md)
+
+
+## Python 3.15 verification (2026-10-04)
+
+2 tests pass on RC3 stable, prerelease-allowed dependencies, and 3.14.7; installed-wheel integer/name round trip passes. No runtime changes were required.
+
+Stable locks were refreshed with `uv lock --upgrade`. Dependency verification uses fresh environments and published wheels only; no source builds. Full developer tools still have wheel blockers (linkcheckmd or PyYAML); passing unit tests do not certify the full developer group. Evidence and details: `C:/github/python315_batch5_2026-10-04.md`. Human operators review and file any upstream bugs.
