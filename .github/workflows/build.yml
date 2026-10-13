@@ -23,7 +23,7 @@ jobs:
         run: uv sync --frozen
 
       - name: Ruff
-        run: uv run ruff check random_names test
+        run: uvx ruff@0.17.0 check random_names test
 
       - name: Test
         run: uv run make test
