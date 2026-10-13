@@ -2,7 +2,7 @@
 Output for user to see.
 """
 
-from random_names import settings as settings
+from random_names import settings
 
 
 def inform(value: str) -> None:

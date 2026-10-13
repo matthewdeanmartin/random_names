@@ -5,7 +5,7 @@ from random_names.make_name import initialize, number_from_name, number_to_name
 
 def test_make_up_module_name() -> None:
     """exercise code"""
-    for _ in range(0, 200):
+    for _ in range(200):
         value = random.randint(1, 100000000)  # nosec
         module_name = number_to_name(value, "foo", "q")
         print(value, module_name, number_from_name(module_name))
@@ -21,7 +21,7 @@ def test_make_up_module_name() -> None:
 def test_make_up_module_name_reinitialize() -> None:
     """exercise code"""
 
-    for _ in range(0, 200):
+    for _ in range(200):
         initialize()
         value = random.randint(1, 100000000)  # nosec
         module_name = number_to_name(value, "foo", "q")

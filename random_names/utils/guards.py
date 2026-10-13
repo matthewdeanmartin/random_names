@@ -13,7 +13,7 @@ have 100% coverage on most files)
 """
 
 import logging
-from typing import Any, Dict
+from typing import Any
 
 LOGGER = logging.getLogger(__name__)
 
@@ -65,7 +65,7 @@ def must_be_falsy(value: Any, message: str = "Value must not be falsy") -> None:
 
 def must_not_already_be_in_dictionary(
     key: Any,
-    dictionary: Dict[Any, Any],
+    dictionary: dict[Any, Any],
     message: str = "Key already in dictionary",
     warn_only: bool = False,
 ) -> None:
@@ -91,5 +91,5 @@ def assert_is_number(value: str) -> None:
     # noinspection PyBroadException
     try:
         _ = int(value)
-    except BaseException:
+    except (TypeError, ValueError):
         LOGGER.error(f"Expected numerical id, got {value}")

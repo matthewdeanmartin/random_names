@@ -4,11 +4,11 @@ Convert a post id to a english name in a hopefully reversible manner
 
 # word list ultimately from wictionary
 # https://www.wordexample.com/list/most-common-nouns-english
-from typing import Any, List
+from typing import Any
 
 from random_names.utils.files_utils import find_file
 
-NAMES: List[str] = []
+NAMES: list[str] = []
 
 FILE = "clean_ten_k.txt"
 
@@ -23,7 +23,7 @@ def initialize() -> None:
     # See ETL for what it took to get a clean file.
     words_path = find_file(FILE, __file__)
     with open(words_path, encoding="utf-8") as name_file:
-        NAMES.extend(name.strip() for name in name_file.readlines())
+        NAMES.extend(name.strip() for name in name_file)
 
     if len(NAMES) != 10000:
         raise TypeError(f"Init failed, didn't find 10,000 words, got {len(NAMES)}")
@@ -31,7 +31,7 @@ def initialize() -> None:
 
 # TODO: replace with a SO sourced post.
 # https://www.geeksforgeeks.org/break-list-chunks-size-n-python/
-def divide_chunks(value: List[Any], number: int) -> Any:
+def divide_chunks(value: list[Any], number: int) -> Any:
     """looping till length l"""
     for index in range(0, len(value), number):
         yield value[index : index + number]
