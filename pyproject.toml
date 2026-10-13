@@ -45,7 +45,7 @@ include = [
 
 [tool.hatch.build.targets.sdist]
 # No section previously existed, so hatchling swept the whole project tree
-# (including .config/.build_state/*, .github/workflows, Pipfile.lock, reports/);
+# (including .github/workflows, reports/);
 # pin an explicit list instead.
 include = ["/README.md", "/LICENSE", "/CHANGELOG.md", "/random_names", "/test"]
 

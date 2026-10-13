@@ -139,3 +139,4 @@ reports/dead_code.txt
 reports/line_counts.txt
 
 reports/lint.txt
+junit.xml
