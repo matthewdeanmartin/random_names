@@ -24,8 +24,8 @@ dependencies = []
 
 [project.urls]
 Repository = "https://github.com/matthewdeanmartin/random_names"
-Homepage = "https://github.com/matthewdeanmartin/random_names"
-Documentation = "https://github.com/matthewdeanmartin/random_names"
+Homepage = "https://matthewdeanmartin.github.io/random_names/"
+Documentation = "https://random-names.readthedocs.io/"
 "Bug Tracker" = "https://github.com/matthewdeanmartin/random_names/issues"
 "Change Log" = "https://github.com/matthewdeanmartin/random_names/blob/main/CHANGELOG.md"
 

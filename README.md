@@ -10,7 +10,7 @@ In action here: https://major-system.info/en/
 Usage
 -----
 ```
-from random_names.make_names import number_to_name,number_from_name
+from random_names.make_name import number_to_name, number_from_name
 
 # TODO: needs a user specified separator
 name = number_to_name(100,"prefix","q")
@@ -36,7 +36,8 @@ I ran the world list through cuss word detection & removed most of the worst.
 
 Docs
 ----
-- [To do](https://github.com/matthewdeanmartin/random_names/blob/main/TODO.md)
+- [User guide](https://github.com/matthewdeanmartin/random_names/blob/main/docs/index.md)
+- [To do](https://github.com/matthewdeanmartin/random_names/blob/main/docs/TODO.md)
 
 
 Related Pypi Packages
@@ -67,13 +68,8 @@ Random names, just random names. No way to convert to a number
 ## Project Links
 
 - [GitHub](https://github.com/matthewdeanmartin/random_names)
+- [Homepage](https://matthewdeanmartin.github.io/random_names/)
+- [Documentation source](https://github.com/matthewdeanmartin/random_names/blob/main/docs/index.md)
 - [PyPI](https://pypi.org/project/random-names/)
 - [Bug Tracker](https://github.com/matthewdeanmartin/random_names/issues)
 - [Change Log](https://github.com/matthewdeanmartin/random_names/blob/main/CHANGELOG.md)
-
-
-## Python 3.15 verification (2026-10-04)
-
-2 tests pass on RC3 stable, prerelease-allowed dependencies, and 3.14.7; installed-wheel integer/name round trip passes. No runtime changes were required.
-
-Stable locks were refreshed with `uv lock --upgrade`. Dependency verification uses fresh environments and published wheels only; no source builds. Full developer tools still have wheel blockers (linkcheckmd or PyYAML); passing unit tests do not certify the full developer group. Evidence and details: `C:/github/python315_batch5_2026-10-04.md`. Human operators review and file any upstream bugs.

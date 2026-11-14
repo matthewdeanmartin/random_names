@@ -1,0 +1,16 @@
+site_name: random_names
+site_url: https://random-names.readthedocs.io/
+site_description: Reversible names for integer identifiers.
+repo_url: https://github.com/matthewdeanmartin/random_names
+edit_uri: edit/main/docs/
+
+theme:
+  name: readthedocs
+
+nav:
+  - Overview: index.md
+  - User guide: guide.md
+  - Project notes: TODO.md
+
+plugins:
+  - search

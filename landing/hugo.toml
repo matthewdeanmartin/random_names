@@ -1,0 +1,11 @@
+baseURL = "https://matthewdeanmartin.github.io/random_names/"
+locale = "en-us"
+title = "random_names"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Turn integer IDs into repeatable word-based names and recover the original number."
+  docs = "https://random-names.readthedocs.io/"
+  guide = "https://github.com/matthewdeanmartin/random_names/blob/main/docs/guide.md"
+  github = "https://github.com/matthewdeanmartin/random_names"
+  pypi = "https://pypi.org/project/random-names/"
